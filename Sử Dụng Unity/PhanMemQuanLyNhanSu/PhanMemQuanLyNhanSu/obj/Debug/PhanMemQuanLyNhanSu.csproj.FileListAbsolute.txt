@@ -1,0 +1,50 @@
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\PhanMemQuanLyNhanSu.exe.config
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\PhanMemQuanLyNhanSu.exe
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\PhanMemQuanLyNhanSu.pdb
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csprojAssemblyReference.cache
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.Properties.Resources.resources
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csproj.GenerateResource.cache
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csproj.CoreCompileInputs.cache
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.exe
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.pdb
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormMain.resources
+C:\Users\Vo Tan Nguyen\source\repos\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormNhanVien.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\PhanMemQuanLyNhanSu.exe.config
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\PhanMemQuanLyNhanSu.exe
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\PhanMemQuanLyNhanSu.pdb
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csprojAssemblyReference.cache
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormMain.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormDuAn.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormLuong.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormNhanVien.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormPhanCong.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormPhongBan.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.Properties.Resources.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csproj.GenerateResource.cache
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csproj.CoreCompileInputs.cache
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.exe
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.pdb
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\PhanMemQuanLyNhanSu.exe.config
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\PhanMemQuanLyNhanSu.exe
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\PhanMemQuanLyNhanSu.pdb
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\EntityFramework.dll
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\EntityFramework.xml
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csprojAssemblyReference.cache
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormMain.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormDuAn.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormLuong.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormNhanVien.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormPhanCong.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormPhongBan.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.Properties.Resources.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csproj.GenerateResource.cache
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csproj.CoreCompileInputs.cache
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csproj.CopyComplete
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.exe
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.pdb
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormChamCong.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormDangNhap.resources
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.csproj.ResolveComReference.cache
+C:\Users\Vo Tan Nguyen\Documents\GitHub\DACuoiKy\Sử Dụng Unity\PhanMemQuanLyNhanSu\PhanMemQuanLyNhanSu\obj\Debug\PhanMemQuanLyNhanSu.FormAbout.resources

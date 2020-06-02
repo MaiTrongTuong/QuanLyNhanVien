@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QuanLyNhanSuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DangNhap">
+          <Key>
+            <PropertyRef Name="TenTaiKhoan" />
+            <PropertyRef Name="MatKhau" />
+          </Key>
+          <Property Name="TenTaiKhoan" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="MatKhau" Type="nchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DuAn">
+          <Key>
+            <PropertyRef Name="MaDA" />
+          </Key>
+          <Property Name="MaDA" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenDA" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaDiem" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phong" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Luong">
+          <Key>
+            <PropertyRef Name="MaLuong" />
+          </Key>
+          <Property Name="MaLuong" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenLuong" Type="nvarchar" MaxLength="50" />
+          <Property Name="LuongCB" Type="float" />
+          <Property Name="HeSoLuong" Type="float" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="HoTenNV" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgaySinh" Type="date" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phong" Type="nvarchar" MaxLength="50" />
+          <Property Name="CMND" Type="nchar" MaxLength="9" />
+          <Property Name="CongViec" Type="nvarchar" MaxLength="50" />
+          <Property Name="GhiChu" Type="nvarchar" MaxLength="500" />
+          <Property Name="MaLuong" Type="nvarchar" MaxLength="50" />
+          <Property Name="LuongCB" Type="float" />
+          <Property Name="SoNgayNghi" Type="int" />
+          <Property Name="SoNgayDiLam" Type="int" />
+          <Property Name="TienThuong" Type="float" />
+          <Property Name="TienPhat" Type="float" />
+          <Property Name="TONGLUONG" Type="float" />
+        </EntityType>
+        <EntityType Name="PhanCongNV">
+          <Key>
+            <PropertyRef Name="MaDA" />
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaDA" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaNV" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ThoiGianStart" Type="date" />
+          <Property Name="ThoiGianEnd" Type="date" />
+        </EntityType>
+        <EntityType Name="PhongBan">
+          <Key>
+            <PropertyRef Name="MaPB" />
+          </Key>
+          <Property Name="MaPB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenPB" Type="nvarchar" MaxLength="50" />
+          <Property Name="TruongPhong" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgayNhanChuc" Type="date" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_DuAn_PhongBan">
+          <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="0..1" />
+          <End Role="DuAn" Type="Self.DuAn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhongBan">
+              <PropertyRef Name="MaPB" />
+            </Principal>
+            <Dependent Role="DuAn">
+              <PropertyRef Name="Phong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhanVien_Luong">
+          <End Role="Luong" Type="Self.Luong" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Luong">
+              <PropertyRef Name="MaLuong" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="MaLuong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhanVien_PhongBan">
+          <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhongBan">
+              <PropertyRef Name="MaPB" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="Phong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhanCongNV_DuAn">
+          <End Role="DuAn" Type="Self.DuAn" Multiplicity="1" />
+          <End Role="PhanCongNV" Type="Self.PhanCongNV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DuAn">
+              <PropertyRef Name="MaDA" />
+            </Principal>
+            <Dependent Role="PhanCongNV">
+              <PropertyRef Name="MaDA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhanCongNV_NhanVien">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+          <End Role="PhanCongNV" Type="Self.PhanCongNV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="PhanCongNV">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhongBan_NhanVien">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="PhongBan">
+              <PropertyRef Name="TruongPhong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLyNhanSuModelStoreContainer">
+          <EntitySet Name="DangNhap" EntityType="Self.DangNhap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DuAn" EntityType="Self.DuAn" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Luong" EntityType="Self.Luong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhanCongNV" EntityType="Self.PhanCongNV" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhongBan" EntityType="Self.PhongBan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DuAn_PhongBan" Association="Self.FK_DuAn_PhongBan">
+            <End Role="PhongBan" EntitySet="PhongBan" />
+            <End Role="DuAn" EntitySet="DuAn" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhanVien_Luong" Association="Self.FK_NhanVien_Luong">
+            <End Role="Luong" EntitySet="Luong" />
+            <End Role="NhanVien" EntitySet="NhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhanVien_PhongBan" Association="Self.FK_NhanVien_PhongBan">
+            <End Role="PhongBan" EntitySet="PhongBan" />
+            <End Role="NhanVien" EntitySet="NhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhanCongNV_DuAn" Association="Self.FK_PhanCongNV_DuAn">
+            <End Role="DuAn" EntitySet="DuAn" />
+            <End Role="PhanCongNV" EntitySet="PhanCongNV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhanCongNV_NhanVien" Association="Self.FK_PhanCongNV_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="PhanCongNV" EntitySet="PhanCongNV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhongBan_NhanVien" Association="Self.FK_PhongBan_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="PhongBan" EntitySet="PhongBan" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuanLyNhanSuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DangNhap">
+          <Key>
+            <PropertyRef Name="TenTaiKhoan" />
+            <PropertyRef Name="MatKhau" />
+          </Key>
+          <Property Name="TenTaiKhoan" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DuAn">
+          <Key>
+            <PropertyRef Name="MaDA" />
+          </Key>
+          <Property Name="MaDA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenDA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiaDiem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PhongBan" Relationship="Self.FK_DuAn_PhongBan" FromRole="DuAn" ToRole="PhongBan" />
+          <NavigationProperty Name="PhanCongNV" Relationship="Self.FK_PhanCongNV_DuAn" FromRole="DuAn" ToRole="PhanCongNV" />
+        </EntityType>
+        <EntityType Name="Luong">
+          <Key>
+            <PropertyRef Name="MaLuong" />
+          </Key>
+          <Property Name="MaLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LuongCB" Type="Double" />
+          <Property Name="HeSoLuong" Type="Double" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK_NhanVien_Luong" FromRole="Luong" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HoTenNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CMND" Type="String" MaxLength="9" FixedLength="true" Unicode="true" />
+          <Property Name="CongViec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GhiChu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MaLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LuongCB" Type="Double" />
+          <Property Name="SoNgayNghi" Type="Int32" />
+          <Property Name="SoNgayDiLam" Type="Int32" />
+          <Property Name="TienThuong" Type="Double" />
+          <Property Name="TienPhat" Type="Double" />
+          <Property Name="TONGLUONG" Type="Double" />
+          <NavigationProperty Name="Luong" Relationship="Self.FK_NhanVien_Luong" FromRole="NhanVien" ToRole="Luong" />
+          <NavigationProperty Name="PhongBan" Relationship="Self.FK_NhanVien_PhongBan" FromRole="NhanVien" ToRole="PhongBan" />
+          <NavigationProperty Name="PhanCongNV" Relationship="Self.FK_PhanCongNV_NhanVien" FromRole="NhanVien" ToRole="PhanCongNV" />
+          <NavigationProperty Name="PhongBan1" Relationship="Self.FK_PhongBan_NhanVien" FromRole="NhanVien" ToRole="PhongBan" />
+        </EntityType>
+        <EntityType Name="PhanCongNV">
+          <Key>
+            <PropertyRef Name="MaDA" />
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaDA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ThoiGianStart" Type="DateTime" Precision="0" />
+          <Property Name="ThoiGianEnd" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="DuAn" Relationship="Self.FK_PhanCongNV_DuAn" FromRole="PhanCongNV" ToRole="DuAn" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK_PhanCongNV_NhanVien" FromRole="PhanCongNV" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="PhongBan">
+          <Key>
+            <PropertyRef Name="MaPB" />
+          </Key>
+          <Property Name="MaPB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenPB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TruongPhong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgayNhanChuc" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="DuAn" Relationship="Self.FK_DuAn_PhongBan" FromRole="PhongBan" ToRole="DuAn" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK_NhanVien_PhongBan" FromRole="PhongBan" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="Self.FK_PhongBan_NhanVien" FromRole="PhongBan" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_DuAn_PhongBan">
+          <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="0..1" />
+          <End Role="DuAn" Type="Self.DuAn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhongBan">
+              <PropertyRef Name="MaPB" />
+            </Principal>
+            <Dependent Role="DuAn">
+              <PropertyRef Name="Phong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhanCongNV_DuAn">
+          <End Role="DuAn" Type="Self.DuAn" Multiplicity="1" />
+          <End Role="PhanCongNV" Type="Self.PhanCongNV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DuAn">
+              <PropertyRef Name="MaDA" />
+            </Principal>
+            <Dependent Role="PhanCongNV">
+              <PropertyRef Name="MaDA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhanVien_Luong">
+          <End Role="Luong" Type="Self.Luong" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Luong">
+              <PropertyRef Name="MaLuong" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="MaLuong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhanVien_PhongBan">
+          <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhongBan">
+              <PropertyRef Name="MaPB" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="Phong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhanCongNV_NhanVien">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+          <End Role="PhanCongNV" Type="Self.PhanCongNV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="PhanCongNV">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhongBan_NhanVien">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="PhongBan">
+              <PropertyRef Name="TruongPhong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLyNhanSuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DangNhap" EntityType="Self.DangNhap" />
+          <EntitySet Name="DuAn" EntityType="Self.DuAn" />
+          <EntitySet Name="Luong" EntityType="Self.Luong" />
+          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" />
+          <EntitySet Name="PhanCongNV" EntityType="Self.PhanCongNV" />
+          <EntitySet Name="PhongBan" EntityType="Self.PhongBan" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <AssociationSet Name="FK_DuAn_PhongBan" Association="Self.FK_DuAn_PhongBan">
+            <End Role="PhongBan" EntitySet="PhongBan" />
+            <End Role="DuAn" EntitySet="DuAn" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhanCongNV_DuAn" Association="Self.FK_PhanCongNV_DuAn">
+            <End Role="DuAn" EntitySet="DuAn" />
+            <End Role="PhanCongNV" EntitySet="PhanCongNV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhanVien_Luong" Association="Self.FK_NhanVien_Luong">
+            <End Role="Luong" EntitySet="Luong" />
+            <End Role="NhanVien" EntitySet="NhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhanVien_PhongBan" Association="Self.FK_NhanVien_PhongBan">
+            <End Role="PhongBan" EntitySet="PhongBan" />
+            <End Role="NhanVien" EntitySet="NhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhanCongNV_NhanVien" Association="Self.FK_PhanCongNV_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="PhanCongNV" EntitySet="PhanCongNV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhongBan_NhanVien" Association="Self.FK_PhongBan_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="PhongBan" EntitySet="PhongBan" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanLyNhanSuModelStoreContainer" CdmEntityContainer="QuanLyNhanSuEntities">
+          <EntitySetMapping Name="DangNhap">
+            <EntityTypeMapping TypeName="QuanLyNhanSuModel.DangNhap">
+              <MappingFragment StoreEntitySet="DangNhap">
+                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DuAn">
+            <EntityTypeMapping TypeName="QuanLyNhanSuModel.DuAn">
+              <MappingFragment StoreEntitySet="DuAn">
+                <ScalarProperty Name="MaDA" ColumnName="MaDA" />
+                <ScalarProperty Name="TenDA" ColumnName="TenDA" />
+                <ScalarProperty Name="DiaDiem" ColumnName="DiaDiem" />
+                <ScalarProperty Name="Phong" ColumnName="Phong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Luong">
+            <EntityTypeMapping TypeName="QuanLyNhanSuModel.Luong">
+              <MappingFragment StoreEntitySet="Luong">
+                <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
+                <ScalarProperty Name="TenLuong" ColumnName="TenLuong" />
+                <ScalarProperty Name="LuongCB" ColumnName="LuongCB" />
+                <ScalarProperty Name="HeSoLuong" ColumnName="HeSoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhanVien">
+            <EntityTypeMapping TypeName="QuanLyNhanSuModel.NhanVien">
+              <MappingFragment StoreEntitySet="NhanVien">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="HoTenNV" ColumnName="HoTenNV" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Phong" ColumnName="Phong" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="CongViec" ColumnName="CongViec" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+                <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
+                <ScalarProperty Name="LuongCB" ColumnName="LuongCB" />
+                <ScalarProperty Name="SoNgayNghi" ColumnName="SoNgayNghi" />
+                <ScalarProperty Name="SoNgayDiLam" ColumnName="SoNgayDiLam" />
+                <ScalarProperty Name="TienThuong" ColumnName="TienThuong" />
+                <ScalarProperty Name="TienPhat" ColumnName="TienPhat" />
+                <ScalarProperty Name="TONGLUONG" ColumnName="TONGLUONG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhanCongNV">
+            <EntityTypeMapping TypeName="QuanLyNhanSuModel.PhanCongNV">
+              <MappingFragment StoreEntitySet="PhanCongNV">
+                <ScalarProperty Name="MaDA" ColumnName="MaDA" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="ThoiGianStart" ColumnName="ThoiGianStart" />
+                <ScalarProperty Name="ThoiGianEnd" ColumnName="ThoiGianEnd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhongBan">
+            <EntityTypeMapping TypeName="QuanLyNhanSuModel.PhongBan">
+              <MappingFragment StoreEntitySet="PhongBan">
+                <ScalarProperty Name="MaPB" ColumnName="MaPB" />
+                <ScalarProperty Name="TenPB" ColumnName="TenPB" />
+                <ScalarProperty Name="TruongPhong" ColumnName="TruongPhong" />
+                <ScalarProperty Name="NgayNhanChuc" ColumnName="NgayNhanChuc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QuanLyNhanSuModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

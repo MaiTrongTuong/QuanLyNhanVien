@@ -1,0 +1,3 @@
+INSERT INTO ChamCong(MaNV, TenNV)
+SELECT MaNV, HoTenNV
+FROM NhanVien
