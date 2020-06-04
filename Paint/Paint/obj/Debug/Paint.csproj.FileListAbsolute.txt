@@ -1,0 +1,40 @@
+C:\Users\jokerljnkjc\source\repos\Paint\Paint\bin\Debug\Paint.exe.config
+C:\Users\jokerljnkjc\source\repos\Paint\Paint\bin\Debug\Paint.exe
+C:\Users\jokerljnkjc\source\repos\Paint\Paint\bin\Debug\Paint.pdb
+C:\Users\jokerljnkjc\source\repos\Paint\Paint\obj\Debug\Paint.csprojAssemblyReference.cache
+C:\Users\jokerljnkjc\source\repos\Paint\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\jokerljnkjc\source\repos\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\jokerljnkjc\source\repos\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.cache
+C:\Users\jokerljnkjc\source\repos\Paint\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+C:\Users\jokerljnkjc\source\repos\Paint\Paint\obj\Debug\Paint.exe
+C:\Users\jokerljnkjc\source\repos\Paint\Paint\obj\Debug\Paint.pdb
+C:\Users\Administrator\Downloads\Paint-20190418T175105Z-001\Paint\obj\Debug\Paint.exe
+C:\Users\Administrator\Downloads\Paint-20190418T175105Z-001\Paint\obj\Debug\Paint.pdb
+C:\Users\Administrator\Downloads\Paint-20190418T175105Z-001\Paint\bin\Debug\Paint.exe.config
+C:\Users\Administrator\Downloads\Paint-20190418T175105Z-001\Paint\bin\Debug\Paint.exe
+C:\Users\Administrator\Downloads\Paint-20190418T175105Z-001\Paint\bin\Debug\Paint.pdb
+C:\Users\Administrator\Downloads\Paint-20190418T175105Z-001\Paint\obj\Debug\Paint.csprojAssemblyReference.cache
+C:\Users\Administrator\Downloads\Paint-20190418T175105Z-001\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\Administrator\Downloads\Paint-20190418T175105Z-001\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\Administrator\Downloads\Paint-20190418T175105Z-001\Paint\obj\Debug\Paint.csproj.GenerateResource.cache
+C:\Users\Administrator\Downloads\Paint-20190418T175105Z-001\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Paint\Paint\bin\Debug\Paint.exe.config
+C:\Users\Administrator\Downloads\Paint\Paint\bin\Debug\Paint.exe
+C:\Users\Administrator\Downloads\Paint\Paint\bin\Debug\Paint.pdb
+C:\Users\Administrator\Downloads\Paint\Paint\obj\Debug\Paint.csprojAssemblyReference.cache
+C:\Users\Administrator\Downloads\Paint\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\Administrator\Downloads\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\Administrator\Downloads\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.cache
+C:\Users\Administrator\Downloads\Paint\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Paint\Paint\obj\Debug\Paint.exe
+C:\Users\Administrator\Downloads\Paint\Paint\obj\Debug\Paint.pdb
+C:\Users\PC\Desktop\HoSiTuan_17119111_DoAnGiuaKi\HoSiTuan_17119111_DoAnGiuaKi\Source code\Paint\Paint\bin\Debug\Paint.exe.config
+C:\Users\PC\Desktop\HoSiTuan_17119111_DoAnGiuaKi\HoSiTuan_17119111_DoAnGiuaKi\Source code\Paint\Paint\bin\Debug\Paint.exe
+C:\Users\PC\Desktop\HoSiTuan_17119111_DoAnGiuaKi\HoSiTuan_17119111_DoAnGiuaKi\Source code\Paint\Paint\bin\Debug\Paint.pdb
+C:\Users\PC\Desktop\HoSiTuan_17119111_DoAnGiuaKi\HoSiTuan_17119111_DoAnGiuaKi\Source code\Paint\Paint\obj\Debug\Paint.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\HoSiTuan_17119111_DoAnGiuaKi\HoSiTuan_17119111_DoAnGiuaKi\Source code\Paint\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\PC\Desktop\HoSiTuan_17119111_DoAnGiuaKi\HoSiTuan_17119111_DoAnGiuaKi\Source code\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\PC\Desktop\HoSiTuan_17119111_DoAnGiuaKi\HoSiTuan_17119111_DoAnGiuaKi\Source code\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\HoSiTuan_17119111_DoAnGiuaKi\HoSiTuan_17119111_DoAnGiuaKi\Source code\Paint\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\HoSiTuan_17119111_DoAnGiuaKi\HoSiTuan_17119111_DoAnGiuaKi\Source code\Paint\Paint\obj\Debug\Paint.exe
+C:\Users\PC\Desktop\HoSiTuan_17119111_DoAnGiuaKi\HoSiTuan_17119111_DoAnGiuaKi\Source code\Paint\Paint\obj\Debug\Paint.pdb
