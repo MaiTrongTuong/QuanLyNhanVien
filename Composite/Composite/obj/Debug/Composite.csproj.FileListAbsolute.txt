@@ -1,0 +1,10 @@
+D:\Thiet ke phan mem huong doi tuong\Midle\Composite\Composite\obj\Debug\Composite.csprojAssemblyReference.cache
+D:\Thiet ke phan mem huong doi tuong\Midle\Composite\Composite\obj\Debug\Composite.Form1.resources
+D:\Thiet ke phan mem huong doi tuong\Midle\Composite\Composite\obj\Debug\Composite.Properties.Resources.resources
+D:\Thiet ke phan mem huong doi tuong\Midle\Composite\Composite\obj\Debug\Composite.csproj.GenerateResource.cache
+D:\Thiet ke phan mem huong doi tuong\Midle\Composite\Composite\obj\Debug\Composite.csproj.CoreCompileInputs.cache
+D:\Thiet ke phan mem huong doi tuong\Midle\Composite\Composite\bin\Debug\Composite.exe.config
+D:\Thiet ke phan mem huong doi tuong\Midle\Composite\Composite\bin\Debug\Composite.exe
+D:\Thiet ke phan mem huong doi tuong\Midle\Composite\Composite\bin\Debug\Composite.pdb
+D:\Thiet ke phan mem huong doi tuong\Midle\Composite\Composite\obj\Debug\Composite.exe
+D:\Thiet ke phan mem huong doi tuong\Midle\Composite\Composite\obj\Debug\Composite.pdb
