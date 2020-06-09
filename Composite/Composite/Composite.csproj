@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Composite\Composite.cs" />
+    <Compile Include="Composite\Composites.cs" />
+    <Compile Include="Composite\DefineSize.cs" />
     <Compile Include="Composite\Ellipses.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

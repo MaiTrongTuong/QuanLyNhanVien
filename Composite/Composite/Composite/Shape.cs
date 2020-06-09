@@ -17,6 +17,10 @@ namespace Composite
 
         public int Height;
 
+        public bool isSelect = false;
+
+        public int Level;
+        public Pen pen = new Pen(Color.Blue);
         
 
         protected Shape(string name, Point point, int witdh, int height)
@@ -27,8 +31,9 @@ namespace Composite
             Height = height;
         }
 
+        public abstract bool CheckSelect(Point point);
         public abstract bool Area();
-        public abstract void Draw(Graphics graphics, Pen pen);
+        public abstract void Draw(Graphics graphics, Pen penDraw);
         public abstract void FillShape();
 
 

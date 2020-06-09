@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Composite.Composite;
+using Microsoft.Win32.SafeHandles;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +25,7 @@ namespace Composite
         SolidBrush solidBrush;
         Pen pen;
 
-        Composite root;
+        Composites root;
         public Form1()
         {
             InitializeComponent();
@@ -38,13 +40,33 @@ namespace Composite
             pen = new Pen(Color.Green);
             pen.DashStyle = DashStyle.Solid;
             pen.Width = 2;
-            root = new Composite("Composite", new Point(0, 0), 656, 436);
-           
+            root = new Composites("Composite", new Point(0, 0), ptbBoard.Width- 2, ptbBoard.Height -2);
+            root.Level = 0;
+
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
 
 
         }
+        public bool isParent(Composites Parent, Shape Child)
+        {
+            if(Parent.CheckSelect(Child.Point)==true)
+            {
+                int X = Parent.Point.X + Parent.Witdh;
+                int Y = Parent.Point.Y + Parent.Height;
+                int x = Child.Point.X + Child.Witdh;
+                int y = Child.Point.Y + Child.Height;
 
+                if(X>x && Y>y)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public void ChooseShape(Composites composite, Point e, ref bool isFind)
+        {
+      
+        }
         private void btline_Click(object sender, EventArgs e)
         {
             isDraw = true;
@@ -71,7 +93,7 @@ namespace Composite
             btnSquare.BackColor = Color.Green;
 
             typeShape = 3;
-            
+
         }
 
        
@@ -80,13 +102,13 @@ namespace Composite
             shape.Draw(graphics, pen);
             if(shape.Name=="Composite")
             {
-                DrawComposite((Composite)shape);
+                DrawComposite((Composites)shape);
             }
         }
-        public void DrawComposite(Composite composite)
+        public void DrawComposite(Composites composite)
         {
             composite.Draw(graphics, pen);
-            foreach( Shape shape in composite.listChild)
+            foreach( var shape in composite.listChild)
             {
                 DrawShape(shape);
             }
@@ -95,30 +117,49 @@ namespace Composite
         {
             if (isDraw == true)
             {
-                Shape shape;
                 if (typeShape == 1)
                 {
-                    shape = new Lines("Line", e.Location, 40, 40);
+                    Lines shape = new Lines("Line", e.Location, DefineSize.Width, DefineSize.Height);
                     root.listChild.Add(shape);
 
                     isDraw = false;
                 }
                 else if (typeShape==2)
                 {
-                    shape = new Ellipse("Ellipse", e.Location, 40, 40);
+                    Ellipse shape = new Ellipse("Ellipse", e.Location, DefineSize.Width, DefineSize.Width);
                     root.listChild.Add(shape);
 
                     isDraw = false;
                 }
-            }
+                else if (typeShape == 0)
+                {
+                    Composites shape = new Composites("Composite", e.Location, DefineSize.Width_Composite, DefineSize.Height_Composite);
 
-            DrawShape(root);
-            graphics2.DrawImage(bitmap, 0, 0);
+                    root.listChild.Add(shape);
+
+                    isDraw = false;
+
+
+                }
+
+                DrawShape(root);
+                graphics2.DrawImage(bitmap, 0, 0);
+            }
+            else
+            {
+
+                DrawShape(root);
+                graphics2.DrawImage(bitmap, 0, 0);
+            }
         }
 
         private void btnComposite_Click(object sender, EventArgs e)
         {
+            isDraw = true;
 
+            btnSquare.BackColor = Color.Green;
+
+            typeShape = 0;
         }
     }
 }

@@ -16,9 +16,21 @@ namespace Composite
         {
             throw new NotImplementedException();
         }
+
+        public override bool CheckSelect(Point point)
+        {
+            int a = Convert.ToInt32(Math.Sqrt((base.Point.X - point.X) * (base.Point.X - point.X) + (base.Point.Y - point.Y) * (base.Point.Y - point.Y)));
+            int b = Convert.ToInt32(Math.Sqrt(( base.Point.X + base.Witdh  - point.X) * ( base.Point.X + base.Witdh  - point.X) + (base.Point.Y + base.Height - point.Y) * (base.Point.Y + base.Height - point.Y)));
+            int c = Convert.ToInt32(Math.Sqrt(base.Witdh  *  base.Witdh  + base.Height*base.Height));
+
+            if (a + b == c) return true;
+            return false;
+        }
+
         public override void Draw(Graphics graphics, Pen pen)
         {
-            graphics.DrawLine(pen, base.Point.X, base.Point.Y, base.Point.X + 40, base.Point.Y + 40);
+            base.pen = pen;
+            graphics.DrawLine(base.pen, base.Point.X, base.Point.Y, base.Point.X + 40, base.Point.Y + 40);
         }
 
         public override void FillShape()
