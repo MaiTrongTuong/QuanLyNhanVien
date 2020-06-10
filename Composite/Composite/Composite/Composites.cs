@@ -10,6 +10,8 @@ namespace Composite
     public class Composites : Shape
     {
         public List<Shape> listChild = new List<Shape>();
+
+        public Pen myPen;
         public Composites(string name, Point point, int witdh, int height): base(name,point,witdh,height)
         {
          
@@ -25,7 +27,6 @@ namespace Composite
             if (base.Point.X < point.X && base.Point.X + base.Witdh > point.X &&
                 base.Point.Y < point.Y && base.Point.Y + base.Height > point.Y)
             {
-                base.isSelect = true;
                 return true;
             }
             return false;
@@ -35,7 +36,7 @@ namespace Composite
         {
             base.pen = penDraw;
             Rectangle _rect = new Rectangle(base.Point.X,base.Point.Y,base.Witdh,base.Height);
-            graphics.DrawRectangle(base.pen, _rect);
+            graphics.DrawRectangle(pen, _rect);
         }
 
         public override void FillShape()

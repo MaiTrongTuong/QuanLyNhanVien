@@ -19,13 +19,20 @@ namespace Composite
         int typeShape = -1;
         bool isDraw = false;
 
+        public bool isSelect = false;
+
         Bitmap bitmap;
         Graphics graphics;
         Graphics graphics2;
         SolidBrush solidBrush;
-        Pen pen;
+        Pen pen = new Pen(Color.Blue);
 
         Composites root;
+
+        TreeNode treeViewNode;
+        TreeNode treeNode;
+        List<int> listComposite;
+
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +54,37 @@ namespace Composite
 
 
         }
+        public bool AddShape(Composites composite, Shape shape)
+        {
+            composite.listChild.Add(shape);
+            if (isParent(composite,shape) ==true )
+            {
+                if(composite.listChild.Count<=0)
+                {
+                    return true;
+                }
+                else
+                {
+                    foreach(var item in composite.listChild)
+                    {
+                        if(item.Name == "Composite" && isParent((Composites)item,shape)==true)
+                        {
+                            composite.listChild.Remove(shape);
+
+                            if (AddShape((Composites)item, shape) == true)
+                                return true;
+                        }
+                    }
+                }
+                return true;
+            }
+            else
+            {
+                composite.listChild.Remove(shape);
+                return false;
+            }
+        }
+
         public bool isParent(Composites Parent, Shape Child)
         {
             if(Parent.CheckSelect(Child.Point)==true)
@@ -63,9 +101,58 @@ namespace Composite
             }
             return false;
         }
-        public void ChooseShape(Composites composite, Point e, ref bool isFind)
+        public void ChooseShape(Composites composite,Point point, ref bool isSelect)
         {
-      
+            foreach(var shape in composite.listChild)
+            {
+                if(shape.CheckSelect(point)==true)
+                {
+                    shape.isSelect = true;
+                    shape.pen.Color = Color.Red;
+
+                    if (shape.Name=="Composite")
+                    {
+                        ChooseShape((Composites)shape, point, ref isSelect);
+                        if(isSelect ==true)
+                        {
+                            shape.isSelect = false;
+                            shape.pen.Color = Color.Green;
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        isSelect = true;
+                        return;
+                    }
+                }
+            }
+        }
+        public void ShowTree(Composites composite, TreeNode tN)
+        {
+            int i = 0;
+            
+            if (composite.listChild.Count > 0)
+            {
+                listComposite = new List<int>();
+                foreach (var shape in composite.listChild)
+                {
+                    treeNode = new TreeNode(shape.Name);
+                    tN.Nodes.Add(treeNode);
+                    if(shape.Name=="Composite")
+                    {
+                        listComposite.Add(i);
+                    }
+                    i++;
+                }
+                if(listComposite.Count>0)
+                {
+                    foreach(int k in listComposite)
+                    {
+                        ShowTree((Composites)composite.listChild[k], tN.Nodes[k]);
+                    }
+                }
+            }
         }
         private void btline_Click(object sender, EventArgs e)
         {
@@ -90,7 +177,6 @@ namespace Composite
         {
             isDraw = true;
 
-            btnSquare.BackColor = Color.Green;
 
             typeShape = 3;
 
@@ -120,14 +206,14 @@ namespace Composite
                 if (typeShape == 1)
                 {
                     Lines shape = new Lines("Line", e.Location, DefineSize.Width, DefineSize.Height);
-                    root.listChild.Add(shape);
+                    AddShape(root, shape);
 
                     isDraw = false;
                 }
                 else if (typeShape==2)
                 {
-                    Ellipse shape = new Ellipse("Ellipse", e.Location, DefineSize.Width, DefineSize.Width);
-                    root.listChild.Add(shape);
+                    Circles shape = new Circles("Circle", e.Location, DefineSize.Width, DefineSize.Width);
+                    AddShape(root, shape);
 
                     isDraw = false;
                 }
@@ -135,7 +221,7 @@ namespace Composite
                 {
                     Composites shape = new Composites("Composite", e.Location, DefineSize.Width_Composite, DefineSize.Height_Composite);
 
-                    root.listChild.Add(shape);
+                    AddShape(root, shape);
 
                     isDraw = false;
 
@@ -147,17 +233,24 @@ namespace Composite
             }
             else
             {
+                ChooseShape(root, e.Location, ref isSelect);
 
                 DrawShape(root);
                 graphics2.DrawImage(bitmap, 0, 0);
+              
             }
+
+            treeViewInfo.Nodes.Clear();
+
+            treeViewNode = new TreeNode("Root");
+
+            ShowTree(root,treeViewNode);
+            treeViewInfo.Nodes.Add(treeViewNode);
         }
 
         private void btnComposite_Click(object sender, EventArgs e)
         {
             isDraw = true;
-
-            btnSquare.BackColor = Color.Green;
 
             typeShape = 0;
         }

@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSquare = new System.Windows.Forms.Button();
+            this.btnComposite = new System.Windows.Forms.Button();
             this.btnCircle = new System.Windows.Forms.Button();
             this.btline = new System.Windows.Forms.Button();
             this.ptbBoard = new System.Windows.Forms.PictureBox();
             this.treeViewInfo = new System.Windows.Forms.TreeView();
-            this.btnComposite = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBoard)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +42,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnComposite);
-            this.panel1.Controls.Add(this.btnSquare);
             this.panel1.Controls.Add(this.btnCircle);
             this.panel1.Controls.Add(this.btline);
             this.panel1.Location = new System.Drawing.Point(12, 21);
@@ -51,16 +49,16 @@
             this.panel1.Size = new System.Drawing.Size(78, 439);
             this.panel1.TabIndex = 0;
             // 
-            // btnSquare
+            // btnComposite
             // 
-            this.btnSquare.Location = new System.Drawing.Point(2, 120);
-            this.btnSquare.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSquare.Name = "btnSquare";
-            this.btnSquare.Size = new System.Drawing.Size(61, 45);
-            this.btnSquare.TabIndex = 3;
-            this.btnSquare.Text = "Square";
-            this.btnSquare.UseVisualStyleBackColor = true;
-            this.btnSquare.Click += new System.EventHandler(this.btnSquare_Click);
+            this.btnComposite.Location = new System.Drawing.Point(3, 197);
+            this.btnComposite.Margin = new System.Windows.Forms.Padding(2);
+            this.btnComposite.Name = "btnComposite";
+            this.btnComposite.Size = new System.Drawing.Size(73, 45);
+            this.btnComposite.TabIndex = 4;
+            this.btnComposite.Text = "Composite";
+            this.btnComposite.UseVisualStyleBackColor = true;
+            this.btnComposite.Click += new System.EventHandler(this.btnComposite_Click);
             // 
             // btnCircle
             // 
@@ -91,7 +89,7 @@
             this.ptbBoard.Location = new System.Drawing.Point(106, 21);
             this.ptbBoard.Margin = new System.Windows.Forms.Padding(2);
             this.ptbBoard.Name = "ptbBoard";
-            this.ptbBoard.Size = new System.Drawing.Size(600, 440);
+            this.ptbBoard.Size = new System.Drawing.Size(598, 440);
             this.ptbBoard.TabIndex = 2;
             this.ptbBoard.TabStop = false;
             this.ptbBoard.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ptbBoard_MouseClick);
@@ -102,17 +100,6 @@
             this.treeViewInfo.Name = "treeViewInfo";
             this.treeViewInfo.Size = new System.Drawing.Size(274, 439);
             this.treeViewInfo.TabIndex = 3;
-            // 
-            // btnComposite
-            // 
-            this.btnComposite.Location = new System.Drawing.Point(3, 197);
-            this.btnComposite.Margin = new System.Windows.Forms.Padding(2);
-            this.btnComposite.Name = "btnComposite";
-            this.btnComposite.Size = new System.Drawing.Size(73, 45);
-            this.btnComposite.TabIndex = 4;
-            this.btnComposite.Text = "Composite";
-            this.btnComposite.UseVisualStyleBackColor = true;
-            this.btnComposite.Click += new System.EventHandler(this.btnComposite_Click);
             // 
             // Form1
             // 
@@ -135,7 +122,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox ptbBoard;
         private System.Windows.Forms.TreeView treeViewInfo;
-        private System.Windows.Forms.Button btnSquare;
         private System.Windows.Forms.Button btnCircle;
         private System.Windows.Forms.Button btline;
         private System.Windows.Forms.Button btnComposite;

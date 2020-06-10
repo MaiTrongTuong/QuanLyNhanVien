@@ -8,6 +8,7 @@ namespace Composite
 {
     public class Lines:Shape
     {
+        public Pen myPen;
         public Lines(string name, Point point, int witdh, int height) : base(name, point, witdh, height)
         {
 
@@ -30,7 +31,7 @@ namespace Composite
         public override void Draw(Graphics graphics, Pen pen)
         {
             base.pen = pen;
-            graphics.DrawLine(base.pen, base.Point.X, base.Point.Y, base.Point.X + 40, base.Point.Y + 40);
+            graphics.DrawLine(pen, base.Point.X, base.Point.Y, base.Witdh / 2, base.Height / 2); ;
         }
 
         public override void FillShape()

@@ -20,7 +20,8 @@ namespace Composite
         public bool isSelect = false;
 
         public int Level;
-        public Pen pen = new Pen(Color.Blue);
+
+        public Pen pen { get; set; }
         
 
         protected Shape(string name, Point point, int witdh, int height)
